@@ -17,19 +17,19 @@
         <li><a href="4.html" target="_black">Node.js</a></li>
       </ol>
       <div>
-          <input type="text" onchange="alert('changed')">
-          <!-- <input type="button" value="night">
-          <input type="button" value="day">
-           -->
-          <input type="button" value="night" onclick="
-              document.querySelector('body').style.backgroundColor='black';
-              document.querySelector('body').style.color='white';
-          ">
-          <input type="button" value="day" onclick="
+          <input id="day_night" type="button" value="night" onclick="
             var body = document.querySelector('body');
-            body.style.backgroundColor='white';
-            body.style.color='black';
-          ">
+
+            if(this.value === night){
+              body.style.backgroundColor='black';
+              body.style.color='white';
+              this.value = day;
+            }else{
+              body.style.backgroundColor='white';
+              body.style.color='black';
+              this.value = night;
+            }
+          ">  
       
           <h2>WELCOME</h2>
     
