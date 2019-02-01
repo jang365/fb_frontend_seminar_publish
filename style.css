@@ -1,17 +1,27 @@
+body{
+    font-family: Bitter;
+    padding:10px;
+
+}
 h1{
     /* border-width:10px;
     border-style: solid;
     border-color: rgb(25, 78, 224); */
     border-bottom: 10px solid gray;
     padding :10px;
-    margin-bottom:0px
+    margin-bottom:0px;
 }
 ol{
     border-right: 10px solid mediumturquoise;
     margin-top:0px;
+    padding:20px;
 }
 #container{
     display:grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 200px 1fr;
     border-color:blue;
+}
+div{
+    height:100%;
+    padding-left:10px;
 }

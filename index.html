@@ -4,7 +4,46 @@
   <title>Welcome</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
-</head>
+  <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+  <script>
+    function toDay(){
+      var body = document.querySelector('body');
+      var self = document.querySelector('#day_night');
+      var alenth = document.querySelectorAll('a').length;
+      var atag = document.querySelectorAll('a')
+
+      body.style.backgroundColor='black';
+      body.style.color='white';
+      self.value = 'day';
+
+      var i=0;
+      while(i<alenth)
+      {
+        atag[i].style.color='orange';
+        i=i+1;
+      }
+    }
+    function toNight(){
+      var body = document.querySelector('body');
+      var self = document.querySelector('#day_night');
+      var alenth = document.querySelectorAll('a').length;
+      var atag = document.querySelectorAll('a')
+
+      body.style.backgroundColor='white';
+      body.style.color='black';
+      self.value = 'night';
+
+      var i=0;
+      while(i<alenth)
+      {
+        atag[i].style.color='blue';
+        i=i+1;
+      }
+      
+    }
+
+  </script>
+ </head>
 
 <body>
   <h1><a href="index.html" target="_black">Welcome</a></h1>
@@ -18,19 +57,12 @@
       </ol>
       <div>
           <input id="day_night" type="button" value="night" onclick="
-            var body = document.querySelector('body');
-
-            if(this.value === night){
-              body.style.backgroundColor='black';
-              body.style.color='white';
-              this.value = day;
+            if(this.value === 'night'){
+              toDay();
             }else{
-              body.style.backgroundColor='white';
-              body.style.color='black';
-              this.value = night;
+              toNight();
             }
-          ">  
-      
+          ">        
           <h2>WELCOME</h2>
     
           WELCOME HOME
